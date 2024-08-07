@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="monthlyReport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f79c4bb8-da02-49c7-abc0-10a0451c86ee">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="branch" class="java.lang.String"/>
+	<parameter name="sem" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="rollno" class="java.lang.String"/>
+	<parameter name="subject" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM attendance WHERE month = $P{month} and branch = $P{branch} and rollno = $P{rollno} and sem = $P{sem} and subject = $P{subject} and year = $P{year}]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subject" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rollno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="235" y="21" width="100" height="20" uuid="c6672091-bf10-4e67-955e-7339819596de"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="52" width="555" height="1" uuid="10558b88-9180-4263-84d3-9e70767583c4"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="5ee53639-4dff-4ea5-8033-0dbe479a1a2c"/>
+				<text><![CDATA[MONTH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="47" height="20" uuid="02d85e9c-f49f-4e79-bcbe-3296a4e259f0"/>
+				<text><![CDATA[BRANCH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="56" height="20" uuid="39b2cf6b-7bdc-4678-b289-cae9516018cf"/>
+				<text><![CDATA[SEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="34" height="20" uuid="f25d9c0d-d224-415c-90be-47239838dbcc"/>
+				<text><![CDATA[YEAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="56" height="20" uuid="baf7e475-f02c-4b86-9c7b-3ab20147140f"/>
+				<text><![CDATA[ROLL NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="45" height="20" uuid="614cee35-80d5-4307-9774-f1dc478f2038"/>
+				<text><![CDATA[SUBJECT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="61" height="20" uuid="05825b1f-fc28-4c13-b82b-4ccb6dab4675"/>
+				<text><![CDATA[DATES]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="97780f1e-d5bc-461b-b91a-601801cc49e1"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="0" width="47" height="20" uuid="d0bb9dcd-4fd1-4ff4-8ceb-607d0d0be802"/>
+				<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="56" height="20" uuid="acf8872a-bd12-475e-985b-7e9069e3cf82"/>
+				<textFieldExpression><![CDATA[$F{sem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="52" height="20" uuid="7db24365-4c1f-4478-9bce-2f4f7238f635"/>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="56" height="20" uuid="73045dcd-06da-4545-9e2c-682c43318d81"/>
+				<textFieldExpression><![CDATA[$F{rollno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="56" height="20" uuid="6c20848c-95fa-4dd8-894c-9a4e2d4b2783"/>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="104" height="20" uuid="7eeab96f-7b9b-4679-9c3a-9f26ac1c4c76"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement x="229" y="45" width="80" height="20" uuid="c635b26e-0d21-4e25-8f20-580a332ef9a9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="314" y="44" width="40" height="20" uuid="f2db346f-6603-43fb-99c4-bb126b443143"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="219" y="0" width="166" height="20" uuid="a1e33d3b-9b61-45f3-a98b-7ec353ad451f"/>
+				<text><![CDATA[SOFTWARE BY RAM CHADAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="25" width="129" height="20" uuid="69d67ef2-d05d-4f59-8fac-1e0c62d727de"/>
+				<text><![CDATA[Mob No:- 9011678776]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

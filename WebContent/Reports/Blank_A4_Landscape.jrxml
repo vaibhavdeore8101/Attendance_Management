@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32d1ae59-ebcd-4dca-b624-d39211cd28c4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="sem" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select rollno,enrollmentno,studentname from studentregistration where sem=$P{sem};]]>
+	</queryString>
+	<field name="rollno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rollno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="enrollmentno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="enrollmentno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="studentname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="10" width="120" height="30" uuid="b0a678fb-00f7-4ad7-aae9-77ad980d8980"/>
+				<text><![CDATA[Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement x="-8" y="22" width="830" height="2" uuid="56ce5f65-60cc-4762-b9a6-5da8afa68efd"/>
+			</line>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="747e4d70-cc6e-4f3c-9e34-1c300df94b54">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="205fed79-bb06-4c5d-9be4-b75f2f1295da"/>
+				</reportElement>
+				<text><![CDATA[studentname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="0" width="100" height="30" uuid="f2817719-8f2e-450e-848c-1715f9c1b180">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d15f0a57-3ccc-40cc-bb1e-4f4c21f4c2f4"/>
+				</reportElement>
+				<text><![CDATA[enrollmentno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="0" width="100" height="30" uuid="ade2898b-6969-49ff-8a21-09db7f93ef18">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da7a4472-7620-4463-9dfd-bcad999fddaa"/>
+				</reportElement>
+				<text><![CDATA[rollno]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="5" width="100" height="23" uuid="c98a1c69-20dc-4ad6-899c-2bc5ea6e8ce0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="205fed79-bb06-4c5d-9be4-b75f2f1295da"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="1" width="100" height="22" uuid="432707ac-c7f0-4721-91c4-3e2794fd788c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d15f0a57-3ccc-40cc-bb1e-4f4c21f4c2f4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rollno}.codePointBefore( int )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="5" width="100" height="18" uuid="88000071-bb79-429c-9c3f-c99a0eec9471">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da7a4472-7620-4463-9dfd-bcad999fddaa"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rollno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="170" y="1" width="100" height="30" uuid="99d9872b-9fa1-47f8-a72f-e6375f37b1af"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="11" width="100" height="30" uuid="ab95381f-f87e-4fd4-a008-232b1181e86f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="560" y="10" width="100" height="30" uuid="9b0288dd-fecb-40e1-913e-be91dc3b4215"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

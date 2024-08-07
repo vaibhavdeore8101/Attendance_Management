@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8295bcea-64a4-4ac7-9203-6465dd8287c1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[select * from studentregistration]]>
+	</queryString>
+	<field name="admisiondate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="admisiondate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="rollno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rollno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="enrollmentno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="enrollmentno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="studentname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="branch" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="branch"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="year" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="sem" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sem"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="fathername" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fathername"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="mothername" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mothername"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="fathermono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fathermono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="mothermono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mothermono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="studentmono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentmono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<field name="image" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="image"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentregistration"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="269" y="17" width="100" height="30" uuid="c4b5c24f-7044-4668-a7c4-94d228b290a7"/>
+				<text><![CDATA[List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="47" y="15" width="100" height="30" uuid="c2a8fa74-0468-4719-8a7b-840646e9d482">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e01b4c1-aa3d-46bd-99c0-85c91027049c"/>
+				</reportElement>
+				<text><![CDATA[rollno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="20" width="100" height="30" uuid="1e26114c-5aed-498b-bc3b-972e38b43d3c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4dbef01-0722-4d51-87b4-8235a6a082b3"/>
+				</reportElement>
+				<text><![CDATA[enrollmentno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="10" width="100" height="30" uuid="d0939ff9-f846-4714-b123-50524eb5deac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bdc1fb85-8ed7-451f-abd8-84c1fdde0102"/>
+				</reportElement>
+				<text><![CDATA[studentname]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="47" y="36" width="100" height="30" uuid="23685d23-5794-413b-ae5c-8d281aa5499f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e01b4c1-aa3d-46bd-99c0-85c91027049c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rollno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="42" width="100" height="30" uuid="b09c2ee8-ab52-47a7-bf70-cc1beeab87ab">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4dbef01-0722-4d51-87b4-8235a6a082b3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{enrollmentno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="40" width="100" height="30" uuid="5ce300e3-3cc2-421d-b340-a790240a1dda">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bdc1fb85-8ed7-451f-abd8-84c1fdde0102"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,39 @@
+<%
+Iterator itr;
+List data= (List)request.getAttribute("subjects");
+for (itr=data.iterator(); itr.hasNext(); )
+{
+%>
+
+<th width="200"><b><%=itr.next()%></b></td>
+<%
+}
+%>
+
+
+*********************
+
+<h3>Select Division</h3>
+					<select name="division">
+					
+					<%
+					String div=(String)request.getAttribute("division");
+					if(div!=null)
+					{
+						%>
+						<option value="<%=div%>" name="division"><%=div%></option>
+					<%
+					}
+					else
+					{
+						%>
+						<option value="" name="division">Select Division</option>
+				   <% 
+					}
+					%>
+						<option value="A" name="year">A</option>
+						<option value="B" name="year">B</option>
+						
+					
+					</select>
+					

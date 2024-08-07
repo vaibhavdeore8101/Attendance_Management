@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListStudent" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0aadf09-ec9d-40c7-bd61-588bef51770e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="branch" class="java.lang.String"/>
+	<parameter name="sem" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from studentregistration where  branch=$P{branch} and sem=$P{sem} ;]]>
+	</queryString>
+	<field name="rollno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="enrollmentno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<sortField name="rollno"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="12" width="165" height="20" uuid="bb871139-97bc-4d71-9f30-04fdfa24b900"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[         List Of Student]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="44" width="525" height="2" uuid="eb94ac7a-1f94-4bf3-bf93-a56ea25d37ba"/>
+			</line>
+			<textField pattern=" dd MMMMM, yyyy">
+				<reportElement x="387" y="12" width="100" height="20" uuid="eb705dea-6997-47ae-baa2-eb92ec95c3fd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="2" width="80" height="20" uuid="55946423-a0f5-44d9-be51-482c7925ae6d"/>
+				<text><![CDATA[ROLL NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="2" width="46" height="20" uuid="b3539d99-ff10-48c2-8400-f3e7f2eb6f60"/>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="2" width="97" height="20" uuid="ee5d7a95-3224-4583-a72d-7cad1fceaaa9"/>
+				<text><![CDATA[ENROLLMENT NO.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="80" height="20" uuid="81a87b94-26b0-43c6-9146-4cd71fb36c22"/>
+				<textFieldExpression><![CDATA[$F{rollno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="139" height="20" uuid="2d1041e2-95d0-4acc-9f0a-9c407889bffb"/>
+				<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="0" width="144" height="20" uuid="758b8373-448a-488b-91c5-e83e4b837d4a"/>
+				<textFieldExpression><![CDATA[$F{enrollmentno}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="480" height="1" uuid="286eaf29-3dd3-44c9-a0dc-1c3f87a4b402"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="213" y="53" width="80" height="20" uuid="7b0d7e17-da48-49e7-9e51-89483b06327a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="299" y="53" width="40" height="20" uuid="feb0a55e-e8c0-4bae-82b2-111c0c8422e0"/>
+				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="205" y="3" width="160" height="20" uuid="937c3d44-da81-441c-89f0-33735859498d"/>
+				<text><![CDATA[SOFTWARE BY RAM CHADAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="25" width="138" height="20" uuid="ba067d90-da31-4555-a142-dc8b88c5454c"/>
+				<text><![CDATA[Mob No:-9011678776]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

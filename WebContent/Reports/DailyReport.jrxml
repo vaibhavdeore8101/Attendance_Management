@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyReport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0aadf09-ec9d-40c7-bd61-588bef51770e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="branch" class="java.lang.String"/>
+	<parameter name="sem" class="java.lang.String"/>
+	<parameter name="subject" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from attendance where date=$P{date} and branch=$P{branch} and sem=$P{sem} and subject=$P{subject};]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subject" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rollno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="date_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{date}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="12" width="165" height="20" uuid="bb871139-97bc-4d71-9f30-04fdfa24b900"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Daily Attendance Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="44" width="525" height="2" uuid="eb94ac7a-1f94-4bf3-bf93-a56ea25d37ba"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="2" width="45" height="20" uuid="7aa1f648-8d4d-4893-aff6-5fad47263078"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="2" width="61" height="20" uuid="4de71d75-543e-4f72-9bbf-494929d0cd22"/>
+				<text><![CDATA[branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="2" width="53" height="20" uuid="d96db964-1b5f-4664-b6d6-c07681d09cb3"/>
+				<text><![CDATA[sem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="2" width="60" height="20" uuid="1ea9f566-1043-42c5-b48c-ac5caaae157a"/>
+				<text><![CDATA[subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="2" width="80" height="20" uuid="55946423-a0f5-44d9-be51-482c7925ae6d"/>
+				<text><![CDATA[rollno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="2" width="46" height="20" uuid="b3539d99-ff10-48c2-8400-f3e7f2eb6f60"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20" uuid="a800152d-6411-4db3-b129-d1cd87416305"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="61" height="20" uuid="daf4bbf3-fd38-4699-b72f-a8d0d992361a"/>
+				<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="55" height="20" uuid="835c3d89-8d34-457a-b78c-d5f88bf2dfb3"/>
+				<textFieldExpression><![CDATA[$F{sem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="72" height="20" uuid="16ddb064-17b3-406f-a69e-3a22b05f6d00"/>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="80" height="20" uuid="81a87b94-26b0-43c6-9146-4cd71fb36c22"/>
+				<textFieldExpression><![CDATA[$F{rollno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="0" width="46" height="20" uuid="2d1041e2-95d0-4acc-9f0a-9c407889bffb"/>
+				<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="213" y="53" width="80" height="20" uuid="7b0d7e17-da48-49e7-9e51-89483b06327a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="299" y="53" width="40" height="20" uuid="feb0a55e-e8c0-4bae-82b2-111c0c8422e0"/>
+				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="205" y="3" width="160" height="20" uuid="937c3d44-da81-441c-89f0-33735859498d"/>
+				<text><![CDATA[SOFTWARE BY RAM CHADAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="25" width="138" height="20" uuid="ba067d90-da31-4555-a142-dc8b88c5454c"/>
+				<text><![CDATA[Mob No:-9011678776]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
